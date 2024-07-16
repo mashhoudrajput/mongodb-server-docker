@@ -12,6 +12,12 @@ services:
     volumes:
       - mongodb_data:/data/db
     restart: always
+    networks:
+      - app-network
 
 volumes:
   mongodb_data:
+
+networks:
+  app-network:
+    driver: bridge
